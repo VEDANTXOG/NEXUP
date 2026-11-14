@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NEXUP — Marketplace</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../CSS/marketplace.css">
+</head>
+
+
+<body>
+
+    <!-- ==================================================
+                         NAVBAR
+    ================================================== -->
+
+    <header class="navbar">
+
+        <a href="home2.html" class="logo">
+            NEXUP
+        </a>
+
+
+    <nav class="nav-links">
+
+    <a href="home2.html">
+        Home
+    </a>
+
+    <a href="marketplace.html" class="active">
+        Marketplace
+    </a>
+
+    <a href="#">
+        Sell
+    </a>
+
+    <a href="#">
+        Favorites
+    </a>
+
+</nav>
+
+
+        <div class="nav-actions">
+
+            <button class="nav-search" id="navSearch" type="button">
+
+                <span class="nav-search-icon">⌕</span>
+
+                <span>Search</span>
+
+                <kbd>⌘ K</kbd>
+
+            </button>
+
+
+            <button class="profile-button" type="button">
+                N
+            </button>
+
+
+            <button class="nav-chevron" type="button">
+                ˅
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+                         HERO
+    ================================================== -->
+
+    <main>
+
+        <section class="marketplace-hero">
+
+            <!-- LEFT -->
+
+            <div class="hero-copy">
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    THE NEXUP MARKETPLACE
+
+                </div>
+
+
+                <h1>
+                    Find what<br>
+                    comes <em>next.</em>
+                </h1>
+
+
+                <p>
+                    Discover ambitious ventures built by ambitious people.
+                    Explore, evaluate, and find the one worth taking forward.
+                </p>
+
+
+                <div class="hero-search">
+
+                    <span class="search-icon">
+                        ⌕
+                    </span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search ventures, categories, founders..."
+                    >
+
+                    <kbd>
+                        ⌘ K
+                    </kbd>
+
+                </div>
+
+
+                <div class="hero-meta">
+
+                    <span>
+                        <strong id="ventureCount">
+                            0
+                        </strong>
+                        ventures
+                    </span>
+
+                    <span class="meta-dot"></span>
+
+                    <span>
+                        Built for what comes next
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FEATURED -->
+
+            <div class="featured-showcase">
+
+                <div class="featured-card" id="featuredCard">
+
+                    <div class="featured-info">
+
+                        <div class="featured-status">
+
+                            <span class="featured-tag">
+                                FEATURED
+                            </span>
+
+                            <span class="verified">
+                                ✓ Verified
+                            </span>
+
+                        </div>
+
+
+                        <h2 id="featuredName">
+                            NovaMind AI
+                        </h2>
+
+
+                        <span class="featured-category">
+                            AI / AUTOMATION
+                        </span>
+
+
+                        <p id="featuredDescription">
+                            AI automation platform helping modern
+                            businesses eliminate repetitive work and
+                            scale operations faster.
+                        </p>
+
+
+                        <div class="featured-stats">
+
+                            <div>
+                                <span>Revenue</span>
+
+                                <strong id="featuredRevenue">
+                                    $18.2K/mo
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span>Growth</span>
+
+                                <strong class="mint" id="featuredGrowth">
+                                    +143%
+                                </strong>
+                            </div>
+
+
+                            <div>
+                                <span>Asking Price</span>
+
+                                <strong id="featuredPrice">
+                                    $185K
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <button class="view-button" type="button">
+
+                            View venture
+
+                            <span>↗</span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="featured-image">
+
+                        <img
+                            id="featuredImage"
+                            src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1200&q=85"
+                            alt="Featured venture"
+                        >
+
+
+                        <div class="image-overlay"></div>
+
+
+                        <button
+                            class="featured-heart"
+                            id="featuredHeart"
+                            type="button"
+                            aria-label="Favorite featured venture"
+                        >
+                            ♡
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="featured-navigation">
+
+                    <div
+                        class="featured-dots"
+                        id="featuredDots"
+                    ></div>
+
+
+                    <div class="featured-arrows">
+
+                        <button
+                            id="featuredPrev"
+                            type="button"
+                            aria-label="Previous featured venture"
+                        >
+                            ←
+                        </button>
+
+                        <button
+                            id="featuredNext"
+                            type="button"
+                            aria-label="Next featured venture"
+                        >
+                            →
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+                         CATEGORIES
+        ================================================== -->
+
+        <section
+            class="categories-section reveal"
+            id="categories"
+        >
+
+            <div class="category-title">
+                Browse by category
+            </div>
+
+
+            <div
+                class="category-row"
+                id="categoryRow"
+            >
+
+                <button
+                    class="category-pill active"
+                    data-category="All"
+                    type="button"
+                >
+                    All ventures
+                </button>
+
+
+                <button
+                    class="category-pill"
+                    data-category="AI"
+                    type="button"
+                >
+                    AI
+                </button>
+
+
+                <button
+                    class="category-pill"
+                    data-category="SaaS"
+                    type="button"
+                >
+                    SaaS
+                </button>
+
+
+                <button
+                    class="category-pill"
+                    data-category="E-Commerce"
+                    type="button"
+                >
+                    E-Commerce
+                </button>
+
+
+                <button
+                    class="category-pill"
+                    data-category="Gaming"
+                    type="button"
+                >
+                    Gaming
+                </button>
+
+
+                <button
+                    class="category-pill"
+                    data-category="Apps"
+                    type="button"
+                >
+                    Apps
+                </button>
+
+
+                <button
+                    class="category-pill"
+                    data-category="Startup"
+                    type="button"
+                >
+                    Startups
+                </button>
+
+            </div>
+
+
+            <button
+                class="all-categories"
+                id="allCategories"
+                type="button"
+            >
+                View all categories
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+
+        <!-- ==================================================
+                         MARKETPLACE
+        ================================================== -->
+
+        <section
+            class="ventures-section"
+            id="ventures"
+        >
+
+            <div class="marketplace-toolbar reveal">
+
+                <div class="found-count">
+
+                    <strong id="resultCount">
+                        0
+                    </strong>
+
+                    ventures found
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <button
+                        class="filter-button active"
+                        data-filter="all"
+                        type="button"
+                    >
+                        ▦
+                        All
+                    </button>
+
+
+                    <button
+                        class="filter-button"
+                        data-filter="growth"
+                        type="button"
+                    >
+                        ↗
+                        High growth
+                    </button>
+
+
+                    <button
+                        class="filter-button"
+                        data-filter="under50"
+                        type="button"
+                    >
+                        ◉
+                        Under $50K
+                    </button>
+
+
+                    <button
+                        class="filter-button"
+                        data-filter="verified"
+                        type="button"
+                    >
+                        ✓
+                        Verified
+                    </button>
+
+                </div>
+
+
+                <select id="sortSelect">
+
+                    <option value="featured">
+                        Sort by: Featured
+                    </option>
+
+                    <option value="growth">
+                        Sort by: Growth
+                    </option>
+
+                    <option value="price-low">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price-high">
+                        Price: High to Low
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <!-- VENTURES -->
+
+            <div
+                class="venture-grid"
+                id="ventureGrid"
+            ></div>
+
+
+
+            <!-- EMPTY -->
+
+            <div
+                class="empty-state"
+                id="emptyState"
+            >
+
+                <div>
+                    ⌕
+                </div>
+
+                <h3>
+                    Nothing here yet.
+                </h3>
+
+                <p>
+                    Try another search or filter.
+                </p>
+
+                <button
+                    id="resetButton"
+                    type="button"
+                >
+                    Reset marketplace
+                </button>
+
+            </div>
+
+
+
+            <!-- PAGINATION -->
+
+            <div class="pagination">
+
+                <button
+                    class="page-arrow"
+                    type="button"
+                >
+                    ‹
+                </button>
+
+
+                <button
+                    class="page active"
+                    type="button"
+                >
+                    1
+                </button>
+
+
+                <button
+                    class="page"
+                    type="button"
+                >
+                    2
+                </button>
+
+
+                <button
+                    class="page"
+                    type="button"
+                >
+                    3
+                </button>
+
+
+                <span>
+                    ...
+                </span>
+
+
+                <button
+                    class="page"
+                    type="button"
+                >
+                    25
+                </button>
+
+
+                <button
+                    class="page-arrow"
+                    type="button"
+                >
+                    ›
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+                         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                NEXUP
+            </div>
+
+            <p>
+                Where ideas find their next move.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#">
+                About
+            </a>
+
+            <a href="#">
+                How it works
+            </a>
+
+            <a href="#">
+                Pricing
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+        </div>
+
+
+        <span class="copyright">
+            © 2026 NEXUP. All rights reserved.
+        </span>
+
+    </footer>
+
+
+
+    <script src="../JS/marketplace.js"></script>
+
+</body>
+</html>

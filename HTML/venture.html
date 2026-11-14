@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>NEXUP | Venture</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../css/venture.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+                            NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <a
+            href="home2.html"
+            class="logo"
+        >
+            NEXUP<span>.</span>
+        </a>
+
+
+        <nav class="nav-links">
+
+            <a href="home2.html">
+                Marketplace
+            </a>
+
+            <a href="categories.html">
+                Categories
+            </a>
+
+            <a href="home2.html#trending">
+                Trending
+            </a>
+
+            <a href="sell.html">
+                Sell
+            </a>
+
+            <a href="favorites.html">
+                Favorites
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+            <button
+                class="search-btn"
+                id="searchBtn"
+            >
+                <span>⌕</span>
+                Search
+            </button>
+
+
+            <button
+                class="profile-btn"
+                id="profileBtn"
+            >
+                N
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+                            PAGE
+    ====================================================== -->
+
+    <main class="venture-page">
+
+
+        <!-- =================================================
+                            BACK
+        ================================================== -->
+
+        <button
+            class="back-btn"
+            id="backBtn"
+        >
+            ← Back to marketplace
+        </button>
+
+
+
+        <!-- =================================================
+                            HERO
+        ================================================== -->
+
+        <section class="venture-hero">
+
+
+            <div class="hero-left">
+
+
+                <div class="venture-label">
+
+                    <span class="live-dot"></span>
+
+                    <span id="verificationLabel">
+                        VERIFIED VENTURE
+                    </span>
+
+                </div>
+
+
+                <p
+                    class="category-label"
+                    id="ventureCategory"
+                ></p>
+
+
+                <h1 id="ventureName"></h1>
+
+
+                <p
+                    class="hero-description"
+                    id="ventureDescription"
+                ></p>
+
+
+                <div class="hero-meta">
+
+                    <span id="ventureType"></span>
+
+                    <span class="meta-dot"></span>
+
+                    <span id="ventureSeller"></span>
+
+                    <span class="meta-dot"></span>
+
+                    <span>
+                        Listed on NEXUP
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="hero-right">
+
+
+                <button
+                    class="favorite-btn"
+                    id="favoriteBtn"
+                    aria-label="Add to favorites"
+                    aria-pressed="false"
+                >
+                    ♡
+                </button>
+
+
+                <p class="price-label">
+                    ASKING PRICE
+                </p>
+
+
+                <div
+                    class="asking-price"
+                    id="askingPrice"
+                ></div>
+
+
+                <p class="price-note">
+                    Venture acquisition
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+                            STATS
+        ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <div class="stat">
+
+                <span class="stat-label">
+                    MONTHLY REVENUE
+                </span>
+
+                <strong id="revenue">
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <span class="stat-label">
+                    GROWTH
+                </span>
+
+                <strong
+                    class="growth"
+                    id="growth"
+                ></strong>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <span class="stat-label">
+                    VIEWS
+                </span>
+
+                <strong id="views">
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat">
+
+                <span class="stat-label">
+                    CATEGORY
+                </span>
+
+                <strong id="categoryStat">
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+                            CONTENT
+        ================================================== -->
+
+        <section class="content-grid">
+
+
+            <!-- =================================================
+                                LEFT
+            ================================================= -->
+
+            <div class="content-main">
+
+
+                <!-- ABOUT -->
+
+                <section class="content-section">
+
+                    <div class="section-number">
+                        01
+                    </div>
+
+
+                    <div>
+
+                        <p class="eyebrow">
+                            THE VENTURE
+                        </p>
+
+
+                        <h2 id="ventureHeadline">
+                        </h2>
+
+
+                        <p
+                            class="body-text"
+                            id="ventureLongDescription"
+                        ></p>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- DETAILS -->
+
+                <section class="content-section">
+
+                    <div class="section-number">
+                        02
+                    </div>
+
+
+                    <div>
+
+                        <p class="eyebrow">
+                            VENTURE DETAILS
+                        </p>
+
+
+                        <div class="detail-grid">
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    CATEGORY
+                                </span>
+
+                                <strong id="detailCategory">
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    REVENUE
+                                </span>
+
+                                <strong id="detailRevenue">
+                                </strong>
+
+                            </div>
+
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    GROWTH
+                                </span>
+
+                                <strong
+                                    class="growth"
+                                    id="detailGrowth"
+                                ></strong>
+
+                            </div>
+
+
+
+                            <div class="detail-item">
+
+                                <span>
+                                    SELLER
+                                </span>
+
+                                <strong id="detailSeller">
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- OPPORTUNITY -->
+
+                <section class="content-section">
+
+                    <div class="section-number">
+                        03
+                    </div>
+
+
+                    <div>
+
+                        <p class="eyebrow">
+                            THE OPPORTUNITY
+                        </p>
+
+
+                        <h2>
+                            Not just a listing.
+                            <em>A starting point.</em>
+                        </h2>
+
+
+                        <p class="body-text">
+                            Explore the venture, understand the
+                            opportunity and decide whether it is
+                            something worth taking forward.
+                        </p>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                                SIDEBAR
+            ================================================== -->
+
+            <aside class="sidebar">
+
+
+                <!-- SELLER -->
+
+                <div class="seller-card">
+
+                    <p class="eyebrow">
+                        SELLER
+                    </p>
+
+
+                    <div class="seller-profile">
+
+
+                        <div
+                            class="seller-avatar"
+                            id="sellerAvatar"
+                        ></div>
+
+
+                        <div>
+
+                            <strong id="sellerName">
+                            </strong>
+
+                            <span>
+                                Venture owner
+                            </span>
+
+                        </div>
+
+
+                        <div
+                            class="verified"
+                            id="verifiedBadge"
+                        >
+                            ✓
+                        </div>
+
+
+                    </div>
+
+
+                    <p class="seller-description">
+                        This venture is currently listed for
+                        acquisition on NEXUP.
+                    </p>
+
+                </div>
+
+
+
+                <!-- DEAL -->
+
+                <div class="deal-card">
+
+
+                    <div class="deal-top">
+
+                        <span>
+                            ASKING PRICE
+                        </span>
+
+                        <strong id="dealPrice">
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="deal-line">
+
+                        <span>
+                            Monthly revenue
+                        </span>
+
+                        <strong id="dealRevenue">
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="deal-line">
+
+                        <span>
+                            Growth
+                        </span>
+
+                        <strong
+                            class="growth"
+                            id="dealGrowth"
+                        ></strong>
+
+                    </div>
+
+
+
+                    <div class="deal-line">
+
+                        <span>
+                            Category
+                        </span>
+
+                        <strong id="dealCategory">
+                        </strong>
+
+                    </div>
+
+
+
+                    <p class="deal-note">
+                        Negotiation between buyer and seller
+                        will eventually happen through NEXUP.
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- NOTICE -->
+
+                <div class="notice">
+
+                    <span>
+                        ✦
+                    </span>
+
+                    <p>
+                        NEXUP presents venture information
+                        for discovery. Buyers should conduct
+                        their own due diligence.
+                    </p>
+
+                </div>
+
+
+            </aside>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+                            BOTTOM CTA
+        ================================================== -->
+
+        <section class="bottom-cta">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    NEXUP MARKETPLACE
+                </p>
+
+
+                <h2>
+                    Find the next venture
+                    <span>worth building on.</span>
+                </h2>
+
+            </div>
+
+
+            <a
+                href="home2.html"
+                class="marketplace-btn"
+            >
+
+                Back to marketplace
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+                         VENTURE JS
+    ====================================================== -->
+
+    <script src="../js/venture.js"></script>
+
+</body>
+
+</html>

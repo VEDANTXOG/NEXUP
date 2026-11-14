@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sell a Venture — NEXUP</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="../CSS/sell.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+                         NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <a href="marketplace.html" class="back-link">
+
+        <span class="back-arrow">
+            ←
+        </span>
+
+        Marketplace
+
+    </a>
+
+
+    <a href="home2.html" class="logo">
+        NEXUP
+    </a>
+
+
+    <div class="nav-right">
+
+        <span class="nav-label">
+            SELL A VENTURE
+        </span>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+                          MAIN
+===================================================== -->
+
+<main>
+
+
+    <!-- =================================================
+                         HERO
+    ================================================== -->
+
+    <section class="sell-hero">
+
+        <div class="hero-intro">
+
+            <div class="eyebrow">
+
+                <span></span>
+
+                SELL ON NEXUP
+
+            </div>
+
+
+            <h1>
+
+                Your venture.
+                <em>Its next chapter.</em>
+
+            </h1>
+
+
+            <p>
+
+                Build the venture card buyers will see.
+                Tell the story, show the numbers, and put
+                your venture in front of people ready to
+                take it further.
+
+            </p>
+
+        </div>
+
+
+        <div class="hero-index">
+            01 / 02
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+                       BUILDER
+    ================================================== -->
+
+    <section class="sell-builder">
+
+
+        <!-- =================================================
+                           FORM SIDE
+        ================================================== -->
+
+        <div class="builder-form">
+
+
+            <div class="form-header">
+
+                <span>
+                    BUILD YOUR LISTING
+                </span>
+
+                <p>
+                    Everything you enter appears on your
+                    venture card.
+                </p>
+
+            </div>
+
+
+
+            <!-- BASIC INFO -->
+
+            <div class="form-section">
+
+                <div class="section-number">
+                    01
+                </div>
+
+
+                <div class="form-fields">
+
+                    <div class="field">
+
+                        <label for="ventureName">
+                            VENTURE NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="ventureName"
+                            placeholder="e.g. NovaMind AI"
+                            maxlength="40"
+                        >
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="category">
+                            CATEGORY
+                        </label>
+
+                        <div class="select-wrap">
+
+                            <select id="category">
+
+                                <option value="" selected disabled>
+                                    Select a category
+                                </option>
+
+                                <option value="AI">
+                                    AI
+                                </option>
+
+                                <option value="SaaS">
+                                    SaaS
+                                </option>
+
+                                <option value="E-Commerce">
+                                    E-Commerce
+                                </option>
+
+                                <option value="Gaming">
+                                    Gaming
+                                </option>
+
+                                <option value="Apps">
+                                    Apps
+                                </option>
+
+                                <option value="Startup">
+                                    Startup
+                                </option>
+
+                                <option value="Fintech">
+                                    Fintech
+                                </option>
+
+                                <option value="Health">
+                                    Health
+                                </option>
+
+                                <option value="Other">
+                                    Other
+                                </option>
+
+                            </select>
+
+                            <span>
+                                ↓
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="tagline">
+                            ONE-LINE PITCH
+                        </label>
+
+                        <input
+                            type="text"
+                            id="tagline"
+                            placeholder="What makes your venture worth noticing?"
+                            maxlength="100"
+                        >
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="description">
+                            DESCRIPTION
+                        </label>
+
+                        <textarea
+                            id="description"
+                            rows="5"
+                            maxlength="420"
+                            placeholder="Tell buyers what your venture does, who it serves, and why it matters."
+                        ></textarea>
+
+                        <div class="character-count">
+                            <span id="descriptionCount">0</span> / 420
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BUSINESS -->
+
+            <div class="form-section">
+
+                <div class="section-number">
+                    02
+                </div>
+
+
+                <div class="form-fields">
+
+                    <div class="field-row">
+
+                        <div class="field">
+
+                            <label for="revenue">
+                                MONTHLY REVENUE
+                            </label>
+
+                            <div class="input-prefix">
+
+                                <span>
+                                    $
+                                </span>
+
+                                <input
+                                    type="number"
+                                    id="revenue"
+                                    placeholder="18,200"
+                                    min="0"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="field">
+
+                            <label for="growth">
+                                GROWTH
+                            </label>
+
+                            <div class="input-suffix">
+
+                                <input
+                                    type="number"
+                                    id="growth"
+                                    placeholder="143"
+                                    min="0"
+                                >
+
+                                <span>
+                                    %
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="price">
+                            ASKING PRICE
+                        </label>
+
+                        <div class="input-prefix">
+
+                            <span>
+                                $
+                            </span>
+
+                            <input
+                                type="number"
+                                id="price"
+                                placeholder="185,000"
+                                min="0"
+                            >
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FOUNDER -->
+
+            <div class="form-section">
+
+                <div class="section-number">
+                    03
+                </div>
+
+
+                <div class="form-fields">
+
+                    <div class="field">
+
+                        <label for="founder">
+                            YOUR NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="founder"
+                            placeholder="e.g. Alex Carter"
+                            maxlength="50"
+                        >
+
+                    </div>
+
+
+
+                    <div class="field">
+
+                        <label for="founderRole">
+                            YOUR ROLE
+                        </label>
+
+                        <input
+                            type="text"
+                            id="founderRole"
+                            placeholder="e.g. Founder & CEO"
+                            maxlength="50"
+                        >
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- IMAGE -->
+
+            <div class="form-section">
+
+                <div class="section-number">
+                    04
+                </div>
+
+
+                <div class="form-fields">
+
+                    <div class="field">
+
+                        <label>
+                            VENTURE IMAGE
+                        </label>
+
+                        <div
+                            class="image-upload"
+                            id="imageUpload"
+                        >
+
+                            <input
+                                type="file"
+                                id="ventureImage"
+                                accept="image/*"
+                                hidden
+                            >
+
+
+                            <div
+                                class="upload-content"
+                                id="uploadContent"
+                            >
+
+                                <div class="upload-icon">
+                                    +
+                                </div>
+
+                                <strong>
+                                    Add a venture image
+                                </strong>
+
+                                <span>
+                                    JPG, PNG or WEBP
+                                </span>
+
+                            </div>
+
+
+                            <img
+                                id="imagePreview"
+                                alt="Venture preview"
+                            >
+
+
+                            <button
+                                class="remove-image"
+                                id="removeImage"
+                                type="button"
+                            >
+                                ×
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="form-bottom">
+
+                <div class="secure-note">
+
+                    <span>✦</span>
+
+                    You can edit your listing before publishing.
+
+                </div>
+
+
+                <button
+                    class="publish-button"
+                    id="publishButton"
+                    type="button"
+                >
+
+                    PUBLISH VENTURE
+
+                    <span>
+                        ↗
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+                          PREVIEW SIDE
+        ================================================== -->
+
+        <div class="builder-preview">
+
+
+            <div class="preview-header">
+
+                <div>
+
+                    <span>
+                        LIVE PREVIEW
+                    </span>
+
+                    <strong>
+                        Your marketplace card
+                    </strong>
+
+                </div>
+
+
+                <div class="preview-status">
+                    LIVE
+                </div>
+
+            </div>
+
+
+
+            <div class="preview-stage">
+
+
+                <article class="preview-card">
+
+
+                    <div class="preview-image">
+
+                        <div
+                            class="preview-placeholder"
+                            id="previewPlaceholder"
+                        >
+
+                            <span>
+                                N
+                            </span>
+
+                            <small>
+                                YOUR IMAGE
+                            </small>
+
+                        </div>
+
+
+                        <img
+                            id="previewImage"
+                            alt=""
+                        >
+
+
+                        <span
+                            class="preview-category"
+                            id="previewCategory"
+                        >
+                            CATEGORY
+                        </span>
+
+
+                        <div class="preview-overlay"></div>
+
+
+                        <div class="preview-pitch">
+
+                            <span>
+                                THE PITCH
+                            </span>
+
+                            <strong id="previewPitch">
+                                Your one-line pitch appears here.
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="preview-info">
+
+
+                        <div class="preview-verified">
+                            ✓ VERIFIED LISTING
+                        </div>
+
+
+                        <h2 id="previewName">
+                            Your venture
+                        </h2>
+
+
+                        <p id="previewDescription">
+                            Your venture description will appear
+                            here as buyers explore your listing.
+                        </p>
+
+
+
+                        <div class="preview-stats">
+
+
+                            <div>
+
+                                <span>
+                                    REVENUE
+                                </span>
+
+                                <strong id="previewRevenue">
+                                    $0/mo
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    GROWTH
+                                </span>
+
+                                <strong
+                                    class="mint"
+                                    id="previewGrowth"
+                                >
+                                    +0%
+                                </strong>
+
+                            </div>
+
+
+                            <div>
+
+                                <span>
+                                    ASKING
+                                </span>
+
+                                <strong id="previewPrice">
+                                    $0
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="preview-footer">
+
+
+                            <div class="preview-founder">
+
+                                <div id="previewAvatar">
+                                    N
+                                </div>
+
+                                <span id="previewFounder">
+                                    Your name
+                                </span>
+
+                            </div>
+
+
+                            <span class="preview-arrow">
+                                ↗
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div class="preview-note">
+
+                <span>
+                    02
+                </span>
+
+                This is exactly how your venture will
+                appear in the marketplace.
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =================================================
+                        BOTTOM STATEMENT
+    ================================================== -->
+
+    <section class="sell-statement">
+
+        <div class="statement-number">
+            NEXUP
+        </div>
+
+        <h2>
+
+            Don't just
+            <em>sell</em> the idea.
+
+            Show them
+            what's already there.
+
+        </h2>
+
+    </section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+                         FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-logo">
+        NEXUP
+    </div>
+
+    <p>
+        Where ideas find their next move.
+    </p>
+
+    <a href="marketplace.html">
+        BACK TO MARKETPLACE ↑
+    </a>
+
+</footer>
+
+
+
+<script src="../JS/sell.js"></script>
+
+</body>
+
+</html>

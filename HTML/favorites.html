@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NEXUP Favorites — Your saved ventures."
+    >
+
+    <title>NEXUP | Favorites</title>
+
+
+    <!-- FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="../CSS/favorites.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="page-noise"></div>
+
+
+<!-- =========================================================
+                         NAVIGATION
+========================================================= -->
+
+<header class="site-header">
+
+    <div class="nav-shell">
+
+
+        <a
+            href="../HTML/home2.html"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+
+            <span class="brand-name">
+                NEXUP
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a
+                href="../HTML/home2.html#discover"
+                class="nav-link"
+            >
+                Discover
+            </a>
+
+            <a
+                href="../HTML/home2.html#categories"
+                class="nav-link"
+            >
+                Categories
+            </a>
+
+            <a
+                href="../HTML/home2.html#pitches"
+                class="nav-link"
+            >
+                Pitches
+            </a>
+
+            <a
+                href="../HTML/marketplace.html"
+                class="nav-link"
+            >
+                Marketplace
+            </a>
+
+            <a
+                href="../HTML/sell.html"
+                class="nav-link nav-sell"
+            >
+                Sell
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+
+            <button
+                class="favorites-nav active"
+                type="button"
+                aria-label="Favorites"
+            >
+
+                <span class="nav-fav-icon">
+                    ♡
+                </span>
+
+                <span>
+                    Saved
+                </span>
+
+                <span
+                    class="favorite-count"
+                    id="favoriteCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+            <button
+                class="profile-btn"
+                id="profileBtn"
+                type="button"
+            >
+
+                <span class="profile-letter">
+                    N
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+                         MAIN
+========================================================= -->
+
+<main>
+
+
+<!-- =========================================================
+                       PAGE HERO
+========================================================= -->
+
+<section class="favorites-hero">
+
+
+    <div class="hero-rail">
+
+        <span class="rail-number">
+            01
+        </span>
+
+        <span class="rail-line"></span>
+
+        <span class="rail-label">
+            SAVED
+        </span>
+
+    </div>
+
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+
+            <span class="status-dot"></span>
+
+            <span>
+                YOUR NEXUP
+            </span>
+
+            <span class="hero-kicker-line"></span>
+
+            <span>
+                006
+            </span>
+
+        </div>
+
+
+        <div class="hero-title-wrap">
+
+            <h1>
+                Things
+                <span>
+                    worth
+                </span>
+                remembering.
+            </h1>
+
+
+            <div class="hero-side">
+
+                <span>
+                    SAVED VENTURES
+                </span>
+
+                <strong id="heroCount">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-bottom">
+
+            <p>
+                The ventures that caught your attention.
+                Keep them close until you're ready
+                to make your next move.
+            </p>
+
+
+            <a
+                href="../HTML/marketplace.html"
+                class="browse-button"
+            >
+
+                <span>
+                    Explore marketplace
+                </span>
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+                    FAVORITES CONTENT
+========================================================= -->
+
+<section class="favorites-section">
+
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="section-kicker">
+                02 / COLLECTION
+            </span>
+
+            <h2>
+                Your
+                <span>
+                    shortlist.
+                </span>
+            </h2>
+
+        </div>
+
+
+        <div class="section-meta">
+
+            <span>
+                SAVED
+            </span>
+
+            <strong id="sectionCount">
+                00
+            </strong>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+                        EMPTY STATE
+    ====================================================== -->
+
+    <div
+        class="empty-state"
+        id="emptyState"
+    >
+
+        <div class="empty-mark">
+
+            <span>
+                ♡
+            </span>
+
+        </div>
+
+
+        <div class="empty-copy">
+
+            <span class="empty-kicker">
+                NOTHING SAVED YET
+            </span>
+
+            <h3>
+                Your next
+                <span>
+                    obsession
+                </span>
+                is still out there.
+            </h3>
+
+            <p>
+                Browse the marketplace and save
+                ventures you want to come back to.
+            </p>
+
+
+            <a
+                href="../HTML/marketplace.html"
+                class="empty-button"
+            >
+
+                <span>
+                    Discover ventures
+                </span>
+
+                <span>
+                    ↗
+                </span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- =====================================================
+                      FAVORITES GRID
+    ====================================================== -->
+
+    <div
+        class="favorites-grid"
+        id="favoritesGrid"
+    ></div>
+
+
+</section>
+
+
+<!-- =========================================================
+                           CTA
+========================================================= -->
+
+<section class="favorites-cta">
+
+
+    <div class="cta-index">
+        03
+    </div>
+
+
+    <div class="cta-content">
+
+        <span class="section-kicker">
+            KEEP EXPLORING
+        </span>
+
+        <h2>
+            The next
+            great venture
+            might be
+            <span>
+                one scroll away.
+            </span>
+        </h2>
+
+
+        <a
+            href="../HTML/marketplace.html"
+            class="cta-button"
+        >
+
+            <span>
+                Open marketplace
+            </span>
+
+            <span>
+                ↗
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div class="cta-mark">
+
+        <span>
+            N
+        </span>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================================================
+                         FOOTER
+========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <span class="brand-mark">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <span>
+                    NEXUP
+                </span>
+
+            </div>
+
+            <p>
+                BUY. SELL. BUILD.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                EXPLORE
+            </span>
+
+            <a href="../HTML/home2.html#discover">
+                Discover
+            </a>
+
+            <a href="../HTML/home2.html#categories">
+                Categories
+            </a>
+
+            <a href="../HTML/home2.html#pitches">
+                Pitches
+            </a>
+
+            <a href="../HTML/marketplace.html">
+                Marketplace
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                YOUR NEXUP
+            </span>
+
+            <a href="../HTML/favorites.html">
+                Favorites
+            </a>
+
+            <a href="../HTML/profile.html">
+                Profile
+            </a>
+
+            <a href="../HTML/sell.html">
+                Sell a venture
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                NEXUP
+            </span>
+
+            <a href="#">
+                About
+            </a>
+
+            <a href="#">
+                Contact
+            </a>
+
+            <a href="#">
+                Terms
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 NEXUP
+        </span>
+
+        <span>
+            MADE FOR WHAT'S NEXT.
+        </span>
+
+        <span>
+            NEXUP / 006
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="../JS/favorites.js"></script>
+
+</body>
+
+</html>

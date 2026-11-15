@@ -1,0 +1,227 @@
+/* =========================================================
+                      NEXUP PAGES
+   Extra styles for Categories, Pipeline and Profile.
+   Built on the tokens and components in favorites.css.
+========================================================= */
+
+.page-intro {
+    max-width: 640px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* ---------- Pipeline ---------- */
+
+.pipeline-board {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+}
+
+.pipeline-column {
+    border: 1px solid var(--line);
+    background: var(--black-soft);
+    min-height: 220px;
+}
+
+.pipeline-column-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.pipeline-column-head strong {
+    color: var(--mint);
+}
+
+.pipeline-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px;
+}
+
+.pipeline-card {
+    display: grid;
+    gap: 10px;
+    padding: 16px;
+    border: 1px solid var(--line-soft);
+    background: var(--black-card);
+}
+
+.pipeline-name {
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 700;
+    transition: color .3s var(--ease);
+}
+
+.pipeline-name:hover {
+    color: var(--mint);
+}
+
+.pipeline-meta {
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+.pipeline-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.pipeline-actions select,
+.profile-input {
+    flex: 1;
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid var(--line);
+    background: var(--black);
+    color: var(--white);
+    font: 600 13px Manrope, sans-serif;
+}
+
+.pipeline-drop,
+.profile-button {
+    padding: 10px 16px;
+    border: 1px solid var(--line);
+    background: transparent;
+    color: var(--white-soft);
+    font: 700 11px Manrope, sans-serif;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: border-color .3s var(--ease), color .3s var(--ease), background .3s var(--ease);
+}
+
+.pipeline-drop:hover,
+.profile-button:hover {
+    border-color: var(--mint);
+    color: var(--mint);
+}
+
+.profile-button.primary {
+    background: var(--mint);
+    border-color: var(--mint);
+    color: var(--black);
+}
+
+.profile-button.primary:hover {
+    background: var(--mint-soft);
+    color: var(--black);
+}
+
+.profile-button.danger:hover {
+    border-color: #ff8a80;
+    color: #ff8a80;
+}
+
+.pipeline-empty {
+    padding: 18px;
+    color: var(--muted-dark);
+    font-size: 13px;
+}
+
+/* ---------- Profile ---------- */
+
+.profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 70px;
+}
+
+.stat-card {
+    display: grid;
+    gap: 12px;
+    padding: 28px;
+    border: 1px solid var(--line);
+    background: var(--black-card);
+}
+
+.stat-card span {
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+
+.stat-card strong {
+    color: var(--mint);
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.profile-panel {
+    margin-bottom: 70px;
+    padding: 32px;
+    border: 1px solid var(--line);
+    background: var(--black-soft);
+}
+
+.profile-panel h3 {
+    margin: 0 0 18px;
+    font-size: 20px;
+}
+
+.profile-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.profile-form .profile-input {
+    max-width: 360px;
+}
+
+.listing-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 0;
+    border-top: 1px solid var(--line-soft);
+}
+
+.listing-row a {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.listing-row a:hover {
+    color: var(--mint);
+}
+
+.listing-row small {
+    display: block;
+    margin-top: 4px;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1100px) {
+    .pipeline-board {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+    .pipeline-board,
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+}

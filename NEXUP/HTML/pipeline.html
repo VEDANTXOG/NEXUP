@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Track the ventures you are evaluating."
+    >
+
+    <title>NEXUP | Pipeline</title>
+
+
+    <!-- FONT -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="../CSS/favorites.css"
+    >
+    <link rel="stylesheet" href="../CSS/pages.css"
+
+    <meta name="theme-color" content="#080909">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%23080909%27/%3E%3Ctext x=%2716%27 y=%2723%27 text-anchor=%27middle%27 font-family=%27sans-serif%27 font-weight=%27700%27 font-size=%2720%27 fill=%27%238FF5D1%27%3EN%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="../CSS/base.css">
+</head>
+
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-noise"></div>
+
+<header class="site-header">
+
+    <div class="nav-shell">
+
+
+        <a
+            href="../HTML/home2.html"
+            class="brand"
+        >
+
+            <span class="brand-mark">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </span>
+
+            <span class="brand-name">
+                NEXUP
+            </span>
+
+        </a>
+
+
+        <nav class="main-nav">
+
+            <a
+                href="../HTML/home2.html#discover"
+                class="nav-link"
+            >
+                Discover
+            </a>
+
+            <a
+                href="../HTML/categories.html"
+                class="nav-link"
+            >
+                Categories
+            </a>
+
+            <a
+                href="../HTML/home2.html#pitches"
+                class="nav-link"
+            >
+                Pitches
+            </a>
+
+            <a
+                href="../HTML/marketplace.html"
+                class="nav-link"
+            >
+                Marketplace
+            </a>
+
+            <a
+                href="../HTML/sell.html"
+                class="nav-link nav-sell"
+            >
+                Sell
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+
+            <button
+                class="favorites-nav"
+                type="button"
+                aria-label="Favorites"
+            >
+
+                <span class="nav-fav-icon">
+                    ♡
+                </span>
+
+                <span>
+                    Saved
+                </span>
+
+                <span
+                    class="favorite-count"
+                    id="favoriteCount"
+                >
+                    0
+                </span>
+
+            </button>
+
+
+            <button
+                class="profile-btn"
+                id="profileBtn"
+                type="button"
+            >
+
+                <span class="profile-letter">
+                    N
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main id="main">
+
+<section class="favorites-hero">
+    <div class="hero-rail">
+        <span class="rail-number">01</span>
+        <span class="rail-line"></span>
+        <span class="rail-label">PIPELINE</span>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-kicker">
+            <span class="status-dot"></span>
+            <span>YOUR DEAL FLOW</span>
+            <span class="hero-kicker-line"></span>
+        </div>
+
+        <div class="hero-title-wrap">
+            <h1>Your<br><span>pipeline.</span></h1>
+            <div class="hero-side">
+                <span>VENTURES TRACKED</span>
+                <strong id="heroCount">0</strong>
+            </div>
+        </div>
+
+        <div class="hero-bottom">
+            <p>Every venture you save lands here. Move it from Saved to Researching, In talks, and Offer made as your interest grows.</p>
+            <a href="../HTML/marketplace.html" class="browse-button">
+                <span>Explore marketplace</span>
+                <span>↗</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="favorites-section">
+    <div class="section-header">
+        <div>
+            <span class="section-kicker">02 / BOARD</span>
+            <h2>Deal <span>stages.</span></h2>
+        </div>
+    </div>
+
+    <div class="empty-state" id="emptyState" style="display:none">
+        <div class="empty-mark"><span>♡</span></div>
+        <div class="empty-copy">
+            <span class="empty-kicker">NOTHING TO TRACK YET</span>
+            <h3>Save a venture to <span>start</span> your pipeline.</h3>
+            <p>Tap the heart on any venture in the marketplace and it will appear here.</p>
+            <a href="../HTML/marketplace.html" class="empty-button"><span>Discover ventures</span><span>↗</span></a>
+        </div>
+    </div>
+    <div class="pipeline-board" id="pipelineBoard"></div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+
+    <div class="footer-top">
+
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+
+                <span class="brand-mark">
+
+                    <span></span>
+                    <span></span>
+                    <span></span>
+
+                </span>
+
+                <span>
+                    NEXUP
+                </span>
+
+            </div>
+
+            <p>
+                BUY. SELL. BUILD.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                EXPLORE
+            </span>
+
+            <a href="../HTML/home2.html#discover">
+                Discover
+            </a>
+
+            <a href="../HTML/home2.html#categories">
+                Categories
+            </a>
+
+            <a href="../HTML/home2.html#pitches">
+                Pitches
+            </a>
+
+            <a href="../HTML/marketplace.html">
+                Marketplace
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                YOUR NEXUP
+            </span>
+
+            <a href="../HTML/favorites.html">
+                Favorites
+            </a>
+
+            <a href="../HTML/pipeline.html">
+            Pipeline
+        </a>
+        <a href="../HTML/profile.html">
+                Profile
+            </a>
+
+            <a href="../HTML/sell.html">
+                Sell a venture
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <span class="footer-heading">
+                NEXUP
+            </span>
+
+            <a href="https://github.com/VEDANTXOG/NEXUP#readme" target="_blank" rel="noopener">
+            About
+        </a>
+
+            <a href="https://github.com/VEDANTXOG/NEXUP" target="_blank" rel="noopener">
+            Source code
+        </a>
+
+            <a href="https://github.com/VEDANTXOG/NEXUP/blob/main/LICENSE" target="_blank" rel="noopener">
+            License
+        </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 NEXUP
+        </span>
+
+        <span>
+            MADE FOR WHAT'S NEXT.
+        </span>
+
+        <span>
+            NEXUP / 006
+        </span>
+
+    </div>
+
+</footer>
+
+<script src="../JS/data.js"></script>
+<script src="../JS/shared.js"></script>
+<script src="../JS/pipeline.js"></script>
+</body>
+</html>

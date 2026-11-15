@@ -461,11 +461,7 @@ This is an archived frontend prototype, so some things are intentionally out of 
 
 ## Authors
 
-| Name | Role |
-| :--- | :--- |
-| **VEDANTXOG** | Developer |
-| **NEXUP co-founder** | Co-founder and developer |
-
+VEDANT BABAR AND YUVRAJ DESAI
 ---
 
 ## License
